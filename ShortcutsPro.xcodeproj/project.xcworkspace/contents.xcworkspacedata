@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <Group
+      location = "group:New Group"
+      name = "New Group">
+      <FileRef
+         location = "group:AddTemplateView.swift">
+      </FileRef>
+      <FileRef
+         location = "group:TemplateStore.swift">
+      </FileRef>
+      <FileRef
+         location = "group:AppState.swift">
+      </FileRef>
+      <FileRef
+         location = "group:ShortcutsPro.entitlements">
+      </FileRef>
+   </Group>
+   <FileRef
+      location = "self:">
+   </FileRef>
+</Workspace>
