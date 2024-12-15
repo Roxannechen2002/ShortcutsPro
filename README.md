@@ -1,93 +1,113 @@
 # ShortcutsPro
 
-ShortcutsPro 是一個 iOS 應用程序，旨在幫助用戶管理和組織他們的 iOS 快捷指令（Shortcuts）。
+ShortcutsPro is an iOS application designed to help users manage and organize their iOS Shortcuts.
 
-## 功能特點
+---
 
-- 快捷指令分類管理
-- 收藏夾功能
-- 快捷指令詳細信息查看
-- 快速導入快捷指令
-- SwiftData 本地數據存儲
+## Features
 
-## 技術架構
+- **Categorized management of shortcuts**  
+- **Favorites functionality**  
+- **Detailed shortcut information view**  
+- **Quick import of shortcuts**  
+- **Local data storage using SwiftData**
 
-- **SwiftUI**: 用於構建用戶界面
-- **SwiftData**: 用於數據持久化
-- **iOS 17+**: 支持最新的 iOS 特性
+---
 
-## 主要組件
+## Technical Architecture
 
-### 模型（Models）
+- **SwiftUI**: Used to build the user interface.  
+- **SwiftData**: Utilized for persistent data storage.  
+- **iOS 17+**: Leverages the latest iOS features.
 
-1. **Shortcut**
-   - 快捷指令的核心數據模型
-   - 包含名稱、描述、分類、收藏狀態等屬性
-   - 使用 SwiftData 進行管理
+---
 
-2. **ShortcutCategory**
-   - 快捷指令分類枚舉
-   - 包含：AI Tools、Productivity、Life Hack、Well Being
-   - 每個分類都有對應的圖標
+## Key Components
 
-3. **ShortcutTemplate**
-   - 快捷指令模板結構
-   - 包含分類、名稱和 iCloud 鏈接
+### Models
 
-### 視圖（Views）
+1. **Shortcut**  
+   - Core data model for shortcuts.  
+   - Includes properties such as name, description, category, and favorite status.  
+   - Managed using SwiftData.  
 
-1. **ContentView**
-   - 應用程序的主要視圖
-   - 負責整體導航和佈局
+2. **ShortcutCategory**  
+   - Enumeration for shortcut categories.  
+   - Categories include: AI Tools, Productivity, Life Hack, and Well Being.  
+   - Each category is associated with a specific icon.
 
-2. **ShortcutDetailView**
-   - 顯示快捷指令的詳細信息
-   - 包含名稱、描述、分類和收藏狀態
+3. **ShortcutTemplate**  
+   - Template structure for shortcuts.  
+   - Includes the category, name, and iCloud link.
 
-3. **CategoryButton**
-   - 自定義分類按鈕組件
-   - 支持選中狀態顯示
-   - 包含圖標和文字標籤
+---
 
-## 當前進度
+### Views
 
-- [x] 基礎數據模型設計完成
-- [x] SwiftData 集成
-- [x] 分類系統實現
-- [x] 基礎 UI 組件開發
-- [ ] 快捷指令導入功能
-- [ ] 用戶數據持久化
-- [ ] UI 優化和測試
+1. **ContentView**  
+   - The main view of the application.  
+   - Handles overall navigation and layout.
 
-## 待辦事項
+2. **ShortcutDetailView**  
+   - Displays detailed information about a shortcut.  
+   - Includes name, description, category, and favorite status.
 
-1. 完善 ContentView 的實現
-2. 添加快捷指令導入功能的錯誤處理
-3. 實現快捷指令搜索功能
-4. 添加用戶設置頁面
-5. 優化 UI/UX 設計
-6. 添加單元測試
+3. **CategoryButton**  
+   - A custom component for category buttons.  
+   - Supports selected state display.  
+   - Includes an icon and text label.
 
-## 系統要求
+---
 
-- iOS 17.0 或更高版本
-- Xcode 15.0 或更高版本
+## Current Progress
 
-## 安裝說明
+- [x] Basic data model design completed.  
+- [x] Integrated SwiftData.  
+- [x] Implemented the category system.  
+- [x] Developed basic UI components.  
+- [ ] Shortcut import functionality.  
+- [ ] User data persistence.  
+- [ ] UI optimization and testing.
 
-1. 克隆專案存儲庫
-2. 使用 Xcode 打開專案
-3. 選擇目標設備或模擬器
-4. 構建並運行專案
+---
 
-## 貢獻指南
+## To-Do List
 
-歡迎提交 Pull Requests 來改進專案。在提交之前，請確保：
+1. Finalize the implementation of `ContentView`.  
+2. Add error handling for the shortcut import functionality.  
+3. Implement a search feature for shortcuts.  
+4. Add a user settings page.  
+5. Optimize UI/UX design.  
+6. Add unit tests.
 
-1. 代碼符合項目的編碼規範
-2. 添加適當的註釋和文檔
-3. 確保所有現有測試都能通過
+---
 
-## 許可證
+## System Requirements
 
-本專案採用 MIT 許可證。詳情請參見 LICENSE 文件。 
+- **iOS 17.0 or later**  
+- **Xcode 15.0 or later**
+
+---
+
+## Installation Instructions
+
+1. Clone the project repository.  
+2. Open the project in Xcode.  
+3. Select a target device or simulator.  
+4. Build and run the project.
+
+---
+
+## Contribution Guidelines
+
+Contributions are welcome via Pull Requests. Before submitting, please ensure:  
+
+1. Your code adheres to the project’s coding standards.  
+2. Appropriate comments and documentation are included.  
+3. All existing tests pass successfully.
+
+---
+
+## License
+
+This project is licensed under the **MIT License**. See the LICENSE file for details.
