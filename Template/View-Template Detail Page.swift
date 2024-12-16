@@ -51,11 +51,12 @@ struct ViewTemplateButton_Previews: PreviewProvider {
                 iCloudLink: "https://example.com",
                 iconName: "envelope.fill", // 预览时使用的图标
                 relatedTemplateID: nil // 显式传递 nil
-            )
-        ) {
-            print("Button tapped")
-        }
-    }
-}
+            ),
+                       isSelected: true // 新增 isSelected 參數，設置為 true 或 false
+                   ) {
+                       print("Button tapped")
+                   }
+               }
+           }
 
 

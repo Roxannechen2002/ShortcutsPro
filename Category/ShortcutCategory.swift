@@ -2,7 +2,7 @@
 
 import SwiftUI
 
-enum ShortcutCategory: String, Codable {
+enum ShortcutCategory: String, CaseIterable, Codable {
     case productivity
     case aiTools
     case lifeHack

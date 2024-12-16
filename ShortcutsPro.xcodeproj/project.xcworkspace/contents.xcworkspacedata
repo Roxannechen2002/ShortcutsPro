@@ -5,6 +5,15 @@
       location = "group:New Group"
       name = "New Group">
       <FileRef
+         location = "group:AppDelegate.swift">
+      </FileRef>
+      <FileRef
+         location = "group: Info.plist">
+      </FileRef>
+      <FileRef
+         location = "group:class Shortcut.swift">
+      </FileRef>
+      <FileRef
          location = "group:AddTemplateView.swift">
       </FileRef>
       <FileRef

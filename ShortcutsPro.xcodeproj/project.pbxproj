@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		E481F1A62D0D2BB900EFF914 /* View-Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = E481F1A52D0D2BB900EFF914 /* View-Content.swift */; };
-		E481F1A82D0D2BE200EFF914 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = E481F1A72D0D2BE200EFF914 /* Model.swift */; };
 		E481F1D62D0D2F0800EFF914 /* View-Template List.swift in Sources */ = {isa = PBXBuildFile; fileRef = E481F1D42D0D2F0800EFF914 /* View-Template List.swift */; };
 		E481F1D72D0D2F0800EFF914 /* Button-Template.swift in Sources */ = {isa = PBXBuildFile; fileRef = E481F1D02D0D2F0800EFF914 /* Button-Template.swift */; };
 		E481F1D82D0D2F0800EFF914 /* View-Filtered Template List.swift in Sources */ = {isa = PBXBuildFile; fileRef = E481F1D22D0D2F0800EFF914 /* View-Filtered Template List.swift */; };
@@ -21,6 +20,7 @@
 		E481F1F52D0D6C7100EFF914 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E481F1F42D0D6C7100EFF914 /* AppState.swift */; };
 		E481F1F72D0DA0C500EFF914 /* TemplateStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E481F1F62D0DA0C500EFF914 /* TemplateStore.swift */; };
 		E481F1FB2D0DA5BD00EFF914 /* AddTemplateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E481F1FA2D0DA5BD00EFF914 /* AddTemplateView.swift */; };
+		E481F2342D0EC2E100EFF914 /* class Shortcut.swift in Sources */ = {isa = PBXBuildFile; fileRef = E481F2332D0EC2E100EFF914 /* class Shortcut.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,7 +42,6 @@
 
 /* Begin PBXFileReference section */
 		E481F1A52D0D2BB900EFF914 /* View-Content.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View-Content.swift"; sourceTree = "<group>"; };
-		E481F1A72D0D2BE200EFF914 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		E481F1D02D0D2F0800EFF914 /* Button-Template.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Button-Template.swift"; sourceTree = "<group>"; };
 		E481F1D12D0D2F0800EFF914 /* Template.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Template.swift; sourceTree = "<group>"; };
 		E481F1D22D0D2F0800EFF914 /* View-Filtered Template List.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View-Filtered Template List.swift"; sourceTree = "<group>"; };
@@ -56,6 +55,7 @@
 		E481F1F42D0D6C7100EFF914 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		E481F1F62D0DA0C500EFF914 /* TemplateStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateStore.swift; sourceTree = "<group>"; };
 		E481F1FA2D0DA5BD00EFF914 /* AddTemplateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTemplateView.swift; sourceTree = "<group>"; };
+		E481F2332D0EC2E100EFF914 /* class Shortcut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "class Shortcut.swift"; sourceTree = "<group>"; };
 		E4BB50922D0B095E008B3153 /* ShortcutsPro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShortcutsPro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4BB50A52D0B0960008B3153 /* ShortcutsProTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShortcutsProTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4BB50AF2D0B0960008B3153 /* ShortcutsProUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShortcutsProUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -133,9 +133,9 @@
 			isa = PBXGroup;
 			children = (
 				E481F1EF2D0D33EB00EFF914 /* ShortcutsPro.entitlements */,
+				E481F2332D0EC2E100EFF914 /* class Shortcut.swift */,
 				E481F1F42D0D6C7100EFF914 /* AppState.swift */,
 				E481F1A52D0D2BB900EFF914 /* View-Content.swift */,
-				E481F1A72D0D2BE200EFF914 /* Model.swift */,
 				E481F1E82D0D2F4900EFF914 /* Category */,
 				E481F1D52D0D2F0800EFF914 /* Template */,
 				E4BB50942D0B095E008B3153 /* ShortcutsPro */,
@@ -233,6 +233,9 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
+				KnownAssetTags = (
+					New,
+				);
 				LastSwiftUpdateCheck = 1620;
 				LastUpgradeCheck = 1620;
 				TargetAttributes = {
@@ -299,8 +302,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E481F1A82D0D2BE200EFF914 /* Model.swift in Sources */,
 				E481F1A62D0D2BB900EFF914 /* View-Content.swift in Sources */,
+				E481F2342D0EC2E100EFF914 /* class Shortcut.swift in Sources */,
 				E481F1D62D0D2F0800EFF914 /* View-Template List.swift in Sources */,
 				E481F1D72D0D2F0800EFF914 /* Button-Template.swift in Sources */,
 				E481F1D82D0D2F0800EFF914 /* View-Filtered Template List.swift in Sources */,
@@ -469,6 +472,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ShortcutsPro/Preview Content\"";
+				DEVELOPMENT_TEAM = QSK6Q6S5WX;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
@@ -506,6 +510,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ShortcutsPro/Preview Content\"";
+				DEVELOPMENT_TEAM = QSK6Q6S5WX;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;

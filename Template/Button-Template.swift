@@ -5,15 +5,18 @@ import SwiftUI
 
 struct TemplateButton: View {
     let template: ShortcutTemplate
+    let isSelected: Bool 
     let action: () -> Void
 
     var body: some View {
-        Button(action: action) {
+            Button(action: {
+                action()
+            }) {
             VStack {
                 Image(systemName: template.iconName) // 顯示模板對應的圖標
-                    .font(.largeTitle)
+                    .font(.system(size: 30)) // 調整圖標大小
                 Text(template.name) // 顯示模板名稱
-                    .font(.headline)
+                    .font(.footnote) // 調整文字大小
                 Text("Download") // 顯示動作提示
                     .font(.subheadline)
                     .foregroundColor(.blue)
@@ -34,10 +37,11 @@ struct TemplateButton_Previews: PreviewProvider {
                 iCloudLink: "https://example.com",
                 iconName: "envelope.fill", // 預覽使用的圖標
                 relatedTemplateID: nil // 或者提供一個 UUID，例如 UUID()
-            )
-        ) {
-            print("Button tapped")
-        }
-    }
-}
+            ),
+                        isSelected: true // 傳遞 isSelected 參數
+                    ) {
+                        print("Button tapped")
+                    }
+                }
+            }
 

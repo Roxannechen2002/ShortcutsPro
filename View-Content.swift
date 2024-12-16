@@ -20,49 +20,67 @@ struct ContentView: View {
     }
     
     var body: some View {
-        NavigationStack {
-            ScrollView(.horizontal, showsIndicators: false) {
-                HStack(spacing: 12) {
-                    ForEach(ShortcutCategory.allCases, id: \.self) { category in
-                        CategoryButton(
-                            category: category,
-                            isSelected: selectedCategory == category
-                        ) {
-                            selectedCategory = category
+            NavigationStack {
+                VStack {
+                    // 第一個 ScrollView
+                    ScrollView(.horizontal, showsIndicators: false) {
+                        HStack(spacing: 12) {
+                            ForEach(ShortcutCategory.allCases, id: \.self) { category in
+                                NavigationLink(destination: TemplateListView(selectedCategory: category)) {
+                                    VStack {
+                                        Image(systemName: "folder.fill")
+                                            .font(.system(size: 40))
+                                            .foregroundColor(.blue)
+                                        Text(category.rawValue)
+                                            .font(.headline)
+                                            .foregroundColor(.black)
+                                    }
+                                    .padding()
+                                    .background(Color.gray.opacity(0.2))
+                                    .cornerRadius(10)
+                                }
+                            }
                         }
+                        .padding(.horizontal)
                     }
-                }
-                .padding(.horizontal)
-            }
-            
-            ScrollView(.horizontal, showsIndicators: false) {
-                HStack(spacing: 12) {
-                    ForEach(ShortcutTemplate.allCases, id: \.self) { template in
-                        TemplateButton(
-                            template: template,
-                            isSelected: selectedTemplate == template
-                        ) {
-                            selectedTemplate = template
+
+                    // 第二個 ScrollView
+                    ScrollView(.horizontal, showsIndicators: false) {
+                        HStack(spacing: 12) {
+                            ForEach(ShortcutTemplate.allTemplates, id: \.id) { template in
+                                TemplateButton(
+                                    template: template,
+                                    isSelected: selectedTemplate == template,
+                                    action: {
+                                        selectedTemplate = template
+                                    }
+                                )
+                            }
                         }
+                        .padding(.horizontal)
                     }
+
+                    // 測試項目
+                    ListSection()
                 }
-                .padding(.horizontal)
-            }
-            
-            List {
-                // 簡單的測試項目
-                Text("Test Item")
-            }
-            .navigationTitle("快捷指令庫")
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    Button(action: {
-                        // 測試按鈕
-                    }) {
-                        Image(systemName: "plus")
+                .navigationTitle("快捷指令庫")
+                .toolbar {
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        Button(action: {
+                            // 測試按鈕
+                        }) {
+                            Image(systemName: "plus")
+                        }
                     }
                 }
             }
         }
+
+        // 測試項目分離為一個視圖
+        @ViewBuilder
+        func ListSection() -> some View {
+            VStack {
+                Text("Test Item")
+            }
+        }
     }
-}

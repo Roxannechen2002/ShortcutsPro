@@ -31,17 +31,20 @@ struct CategoryListView_Previews: PreviewProvider {
 
 struct TemplateListView: View {
     let selectedCategory: ShortcutCategory
+    @State private var selectedTemplate: ShortcutTemplate? = nil
 
     var body: some View {
         List {
             ForEach(ShortcutTemplate.allTemplates.filter { $0.category == selectedCategory }) { template in
-                NavigationLink(destination: TemplateDetailView(template: template)) {
-                    TemplateButton(template: template) {
-                        // 处理按钮点击事件
-                    }
+                TemplateButton(
+                    template: template,
+                    isSelected: selectedTemplate == template
+                ) {
+                    selectedTemplate = template
                 }
             }
         }
         .navigationTitle("\(selectedCategory.rawValue) Templates")
     }
 }
+
